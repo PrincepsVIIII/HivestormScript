@@ -4,6 +4,7 @@
 2. Move the security template to the "C:\" directory and confirm the full name is "C:\HivestormScript.ps1"
 3. Run the script to open the Security Menu
 
+**This script only works on Windows**
 
 The Security Menu has the following 5 options
 
