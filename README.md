@@ -10,7 +10,6 @@
 Once you run the script, you will be met with the following Security Menu
 
 ### The Security Menu has the following 5 options
--------------------------------------------------
 1. Configure Audit Policies
 2. Configure Account Policies
 3. Locate and Remove Media Files
@@ -27,7 +26,7 @@ Enter the corresponding number (0-5) to select the function you want to run, or 
 - Make sure you do not delete any media files that may be crucial to the Forensic Questions or other important media files.
 - This is designed for Windows Server 2016 and Windows 10. It has as of yet only been tested on Windows 10. I will update this shortly when I finish testing on Windows Server 2016.
 
-## Each Function Explained
+# Each Function Explained
 
 ### Configure Audit Policies
 This is honestly a redundant and possibly non-functional function. When I last tested this it worked, however I have little faith that it will continue to do so. The Audit Policies are configured again in the function "Configure Account Policies" in a much more reliable way, however I wanted to give users the potential to configure only the audit policy, without having to use a completely different security template, hence this solution.
