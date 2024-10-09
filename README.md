@@ -9,7 +9,7 @@
 
 Once you run the script, you will be met with the following Security Menu
 
-####The Security Menu has the following 5 options
+#### The Security Menu has the following 5 options
 
 1. Configure Audit Policies
 2. Configure Account Policies
