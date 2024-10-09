@@ -95,16 +95,15 @@ function Set-AuditPolicies {
 # Function to set Account security and password settings
 function Set-AccountPolicies {
     Write-Host "Configuring account policies..."
-	# Define the path to the security template and log file
+	# Define the path to the security template
 	$templatePath = "C:\HivestormTemplate.inf"
-	#$logFilePath = "C:\SecurityTemplates\ApplySecurityTemplate.log"
 
 	# Check if the template file exists
 	if (Test-Path $templatePath) {
 		Write-Host "Applying security template..." -ForegroundColor Cyan
     
 		# Apply the security template using Secedit
-		secedit /configure /db secedit.sdb /cfg $templatePath /log $logFilePath /verbose
+		secedit /configure /db secedit.sdb /cfg $templatePath /verbose
 
 		# Check if the security template was applied successfully
 		if ($?) {
@@ -112,9 +111,6 @@ function Set-AccountPolicies {
 		} else {
 			Write-Host "Failed to apply the security template." -ForegroundColor Red
 		}
-
-    # Display the path of the log file
-		#Write-Host "Log file: $logFilePath" -ForegroundColor Yellow
 	}	 
 	else {
 		Write-Host "Security template file not found. Please verify the path." -ForegroundColor Red
