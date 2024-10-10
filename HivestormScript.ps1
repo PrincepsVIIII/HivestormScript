@@ -191,7 +191,7 @@ function Disable-InsecureServices {
 
     foreach ($service in $servicesToDisable) {
         try {
-		Stop-Service -Name"$service" -Force
+		Stop-Service -Name"$service" -Force -ErrorAction SilentlyContinue
 		Set-Service -Name "$service" -Status Stopped -StartupType Disabled -ErrorAction Stop
             	Write-Host "Disabled - ${service}" -ForegroundColor Green
         }
