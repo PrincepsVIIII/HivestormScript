@@ -155,7 +155,7 @@ function Remove-MediaFiles {
         foreach ($file in $mediaFiles) {
             # Double-check that each file path still matches the intended Users directory
             if ($file.FullName.StartsWith("$userFolder\", [System.StringComparison]::InvariantCultureIgnoreCase)) {
-				if($file.Name.StartsWith("ForensicQuestion", [System.StringComparison]::InvariantCultureIgnoreCase)){
+				if($file.Name.StartsWith("Forensics", [System.StringComparison]::InvariantCultureIgnoreCase)){
 					Write-Host "Skipped: $($file.FullName)" -ForegroundColor Yellow
 				}
 				else{
