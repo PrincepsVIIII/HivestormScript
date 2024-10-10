@@ -191,8 +191,9 @@ function Disable-InsecureServices {
 
     foreach ($service in $servicesToDisable) {
         try {
-			Set-Service -Name "$service" -Status Stopped -StartupType Disabled -ErrorAction Stop
-            Write-Host "Disabled - ${service}" -ForegroundColor Green
+		Stop-Service -Name"$service" -Force
+		Set-Service -Name "$service" -Status Stopped -StartupType Disabled -ErrorAction Stop
+            	Write-Host "Disabled - ${service}" -ForegroundColor Green
         }
         catch [System.InvalidOperationException] {
 			Write-Host "Unsuccessful - The service ${service} was not found" -ForegroundColor Yellow
