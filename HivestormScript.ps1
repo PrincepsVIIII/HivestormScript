@@ -126,7 +126,7 @@ function Remove-MediaFiles {
     $userFolder = "C:\Users"
 
     # Define file extensions for media types to be removed
-    $mediaExtensions = @('*.mp3', '*.mp4', '*.wav', '*.jpg', '*.jpeg', '*.png', '*.gif', '*.bmp', '*.avi', '*.mov', '*.wmv', '*.mkv', '*.jfif', '*.txt')
+    $mediaExtensions = @('*.mp3', '*.mp4', '*.wav', '*.jpg', '*.jpeg', '*.png', '*.gif', '*.bmp', '*.avi', '*.mov', '*.wmv', '*.mkv', '*.jfif', '*.txt', '*.csv')
 
     # Initialize an array to store found media files
     $mediaFiles = @()
